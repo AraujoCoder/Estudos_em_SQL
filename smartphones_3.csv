@@ -1,0 +1,58 @@
+use eletronicos;
+
+
+create table vendedores (
+	matricula varchar(11) primary key,
+	nome varchar(150) not null,
+	comissao float,
+	data_admissao date,
+	ferias_fatal date
+
+);
+
+CREATE TABLE clientes (
+    cpf VARCHAR(11) PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL DEFAULT '',
+    endereco VARCHAR(150),
+    cidade VARCHAR(50),
+    bairro VARCHAR(50),
+    estado CHAR(2),
+    cep VARCHAR(8) NOT NULL DEFAULT '',
+    idade SMALLINT(3),
+    sexo CHAR(1),
+    primeira_compra BIT(1)
+);
+
+
+
+
+CREATE TABLE notas_fiscais (
+    numero INT(11) PRIMARY KEY,
+    cpf VARCHAR(11) NOT NULL,
+    matricula VARCHAR(11) NOT NULL,
+    data_venda DATE NOT NULL,
+    imposto FLOAT NOT NULL
+);
+
+
+CREATE TABLE vendidos_notas_fiscais (
+    codigo_produto VARCHAR(11) PRIMARY KEY,
+    numero INT(11) NOT NULL,
+    quantidade INT(11) NOT NULL,
+    preco FLOAT NOT NULL
+);
+
+
+
+cpf: 23456789012 bach
+cpf: 34567890123 mozart
+cpf: 45678901234 brahms
+cpf: 56789012345 wagner
+cpf: 67890123456 villa lobos
+cpf: 84896313678 beethoven
+
+
+matricula: 057892 socrates
+matricula: 312325 camus
+matricula: 412728 bauman
+matricula: 907890 aristoteles

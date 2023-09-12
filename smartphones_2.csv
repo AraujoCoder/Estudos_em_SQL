@@ -1,0 +1,46 @@
+use eletronicos;
+
+INSERT INTO eletronicos.smartphones
+VALUES 
+(0, 'Apple','Apple iPhone11', 46999, 7.5, 0, 'bionic', 6, 2.65, 3110, 0, NULL,
+4, 128, 6.1, 60, 2, 'ios',12, 12, 0, 1792, 828);
+
+
+select * from eletronicos.smartphones s 
+
+#O restante dos dados inserirei usando o import do próprio programa.
+
+
+select * from eletronicos.smartphones s 
+
+
+drop  table eletronicos.smartphones ;
+
+CREATE TABLE smartphones (
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    brand_name VARCHAR(50),
+    model VARCHAR(150),
+    price DECIMAL(7),
+    avg_rating DOUBLE,
+    5G_or_not INT,
+    processor_brand CHAR(15),
+    num_cores INT,
+    processor_speed FLOAT,
+    battery_capacity INT,
+    fast_charging_available INT,
+    fast_charging INT,
+    ram_capacity INT,
+    internal_memory INT,
+    screen_size FLOAT(2),
+    refresh_rate INT,
+    num_rear_cameras INT,
+    os VARCHAR(10),
+    primary_camera_rear INT,
+    primary_camera_front INT,
+    extended_memory_available INT,
+    resolution_height INT,
+    resolution_width INT
+);
+
+
+

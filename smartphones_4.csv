@@ -1,0 +1,46 @@
+use eletronicos;
+
+
+insert into vendedores 
+values
+('05789237845', 'Sócrates Escolástico', 0.1, '2023-08-09',
+DATE_ADD('2023-08-09', INTERVAL 23 MONTH)),
+('41272836245', 'Zygmunt Bauman', 0.1, '2020-05-04',
+DATE_ADD('2020-05-04', INTERVAL 23 MONTH)),
+('31232153328', 'Albert Camus', 0.1, '2021-09-23',
+DATE_ADD('2021-09-23', INTERVAL 23 MONTH)),
+('90789372617', 'Aristóteles de Estagira', 0.1, '2022-04-26',
+DATE_ADD('2022-04-26', INTERVAL 23 MONTH));
+
+
+delete vendedores from eletronicos.vendedores 
+
+insert into vendedores 
+values
+('057892', 'Sócrates Escolástico', 0.1, '2023-08-09',
+DATE_ADD('2023-08-09', INTERVAL 23 MONTH)),
+('412728', 'Zygmunt Bauman', 0.1, '2020-05-04',
+DATE_ADD('2020-05-04', INTERVAL 23 MONTH)),
+('312325', 'Albert Camus', 0.1, '2021-09-23',
+DATE_ADD('2021-09-23', INTERVAL 23 MONTH)),
+('907890', 'Aristóteles de Estagira', 0.1, '2022-04-26',
+DATE_ADD('2022-04-26', INTERVAL 23 MONTH));
+
+
+ALTER TABLE eletronicos.notas_fiscais 
+DROP FOREIGN KEY fk_notas_fiscais_matricula;
+
+
+ALTER TABLE vendedores 
+MODIFY matricula VARCHAR(6);
+
+
+ALTER TABLE eletronicos.notas_fiscais
+ADD CONSTRAINT fk_notas_fiscais_matricula
+FOREIGN KEY (matricula)
+REFERENCES vendedores(matricula);
+
+
+
+
+

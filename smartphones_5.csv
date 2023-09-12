@@ -1,0 +1,31 @@
+use eletronicos;
+
+alter table clientes drop column limite_credito, drop column volume_compra;
+
+alter table clientes modify column idade smallint(3);
+
+
+
+
+
+INSERT INTO eletronicos.clientes
+(cpf, nome, endereco, cidade, bairro, estado, cep, idade, sexo, primeira_compra)
+VALUES
+('84896313678', 'Ludwig van Beethoven','rua 15','Guara', 'Polo de modas','DF','14580000',
+56, 'M', 1),
+('23456789012', 'Johann Sebastian Bach', 'Rua Bach', 'Eisenach', 'Centro', 'TH', '99817',
+65, 'M', 1),
+('34567890123', 'Wolfgang Amadeus Mozart', 'Rua Mozart', 'Salzburg', 'Centro', 'SZ', '5020',
+35, 'M', 1),
+('45678901234', 'Johannes Brahms', 'Rua Brahms', 'Hamburg', 'Centro', 'HH', '20355',
+63, 'M', 1),
+('56789012345', 'Richard Wagner', 'Rua Wagner', 'Leipzig', 'Centro', 'SN', '04109',
+70,'M' ,0),
+('67890123456', 'Heitor Villa-Lobos', 'Rua Villa-Lobos', 'Rio de Janeiro', 'Centro', 'RJ', '200120',
+60, 'M', 1);
+
+
+
+select * from eletronicos.clientes c 
+
+
